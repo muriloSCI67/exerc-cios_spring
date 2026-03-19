@@ -15,7 +15,9 @@ public class Exercicio09Controller {
 
     @GetMapping("area-triangulo")
     public String areatriangulo(@RequestParam double base, double altura) {
-        String area = exercicio09Service.calculaAreaTriangulo();
+        String area = exercicio09Service.calculaAreaTriangulo(base, altura);
+        return "área do triangulo: " + area;
+
 
     }
 }
